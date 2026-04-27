@@ -245,7 +245,7 @@ export default function Landing() {
               </h2>
             </div>
             <p style={{ fontFamily: "ui-monospace,monospace", fontSize: 12, textTransform: "uppercase", color: "rgba(239,244,255,0.45)", maxWidth: 280, lineHeight: 1.7 }}>
-              Ganti konten di bawah dengan proyek nyata kamu. Edit file Landing.tsx bagian PROJECTS.
+               Proyek-proyek ini adalah hasil dari rasa penasaran gue dan proses eksplorasi yang terus berkembang. Dari ide sederhana sampai solusi yang lebih matang.
             </p>
           </div>
 
