@@ -21,11 +21,12 @@ const SKILLS = [
 
 const PROJECTS = [
   {
-    title: "Titanic Survival Prediction",
-    desc: "Model klasifikasi untuk memprediksi keselamatan penumpang Titanic. Akurasi 83% menggunakan Random Forest dengan feature engineering.",
-    tag: "Machine Learning",
-    href: "https://github.com/yugenixs",
+    title: "Dashboard Harga Saham IDX",
+    desc: "Dashboard interaktif untuk memvisualisasikan pergerakan harga saham 10 perusahaan teratas di Bursa Efek Indonesia.",
+    tag: "Visualization",
+    href: "https://idx-dashboard.streamlit.app/",
     video: PROJECT_VIDEOS[0],
+    image: "/public/idx-dashboard.png",
   },
   {
     title: "EDA Kualitas Udara Jakarta",
@@ -33,13 +34,15 @@ const PROJECTS = [
     tag: "Data Analysis",
     href: "https://github.com/yugenixs",
     video: PROJECT_VIDEOS[1],
+    image: "",
   },
   {
-    title: "Dashboard Harga Saham IDX",
-    desc: "Dashboard interaktif untuk memvisualisasikan pergerakan harga saham 10 perusahaan teratas di Bursa Efek Indonesia.",
-    tag: "Visualization",
-    href: "https://idx-dashboard.streamlit.app/",
+    title: "Proyek 3",
+    desc: "deskripsi",
+    tag: "Machine Learning",
+    href: "https://github.com/yugenixs",
     video: PROJECT_VIDEOS[2],
+    image: "",
   },
 ];
 
@@ -200,12 +203,11 @@ export default function Landing() {
         </div>
       )}
 
-      {}
+      {/* ── HERO ── */}
       <section
         id="home"
         style={{ position: "relative", width: "100%", overflow: "hidden", height: "100svh", borderBottomLeftRadius: 32, borderBottomRightRadius: 32 }}
       >
-        {}
         <video
           autoPlay
           loop
@@ -232,13 +234,11 @@ export default function Landing() {
             paddingRight: "clamp(1rem,4vw,3rem)",
           }}
         >
-          {}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: "clamp(1.5rem,3vw,2.5rem)" }}>
             <span style={{ fontFamily: "'Anton', sans-serif", fontSize: 16, textTransform: "uppercase", letterSpacing: "0.05em" }}>
               yugenix.
             </span>
 
-            { }
             <nav
               className="liquid-glass"
               style={{
@@ -277,7 +277,6 @@ export default function Landing() {
               ))}
             </nav>
 
-            {/* */}
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }} id="desktop-social">
               {SOCIAL_LINKS.map(({ Icon, href }, i) => (
                 <a
@@ -306,7 +305,6 @@ export default function Landing() {
               ))}
             </div>
 
-            {/* */}
             <button
               onClick={() => setMobileMenuOpen(true)}
               style={{ background: "none", border: "none", cursor: "pointer", color: "#EFF4FF", display: "none" }}
@@ -317,7 +315,6 @@ export default function Landing() {
             </button>
           </div>
 
-          {/* */}
           <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "flex-end", paddingBottom: "clamp(3rem,5vw,5rem)" }}>
             <div style={{ position: "relative", maxWidth: 860 }}>
               <p style={{ fontFamily: "ui-monospace,monospace", fontSize: "clamp(11px,1.1vw,14px)", textTransform: "uppercase", color: "#6FFF00", letterSpacing: "0.15em", marginBottom: 14 }}>
@@ -402,7 +399,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* ── */}
+      {/* ── ABOUT ── */}
       <section
         id="about"
         ref={aboutRef as React.RefObject<HTMLElement>}
@@ -430,7 +427,7 @@ export default function Landing() {
               <span style={{ fontFamily: "'Condiment', cursive", color: "#6FFF00", fontSize: "1.15em" }}>Insight</span>
             </h2>
             <p style={{ fontFamily: "ui-monospace,monospace", fontSize: "clamp(12px,1vw,14px)", textTransform: "uppercase", color: "rgba(239,244,255,0.65)", lineHeight: 1.8, maxWidth: 560 }}>
-              Saya Ilyas — mahasiswa Data Science yang gemar eksplorasi data, membangun model, dan menyajikan cerita dari angka. Saya percaya bahwa data yang baik, bila dipahami dengan benar, bisa mengubah cara kita melihat dunia.
+              Saya Ilyas — mahasiswa Data Science yang gemar mengeksplorasi data, membangun model, dan menyajikan cerita dari angka. Saya percaya bahwa data yang baik, bila dipahami dengan benar, bisa mengubah cara kita melihat dunia.
             </p>
             <p style={{ fontFamily: "ui-monospace,monospace", fontSize: "clamp(12px,1vw,14px)", textTransform: "uppercase", color: "rgba(239,244,255,0.65)", lineHeight: 1.8, maxWidth: 560, marginTop: 16 }}>
               Saat ini fokus pada machine learning, analisis data, dan visualisasi — dengan Python sebagai senjata utama.
@@ -453,7 +450,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* ── */}
+      {/* ── SKILLS ── */}
       <section
         id="skills"
         ref={skillsRef as React.RefObject<HTMLElement>}
@@ -468,13 +465,7 @@ export default function Landing() {
             </h2>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-              gap: 20,
-            }}
-          >
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>
             {SKILLS.map(({ icon: Icon, label, desc }, i) => (
               <div
                 key={i}
@@ -501,7 +492,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* ── */}
+      {/* ── PROJECTS ── */}
       <section
         id="projects"
         ref={projectsRef as React.RefObject<HTMLElement>}
@@ -538,11 +529,20 @@ export default function Landing() {
                 onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.07)")}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.01)")}
               >
+                {/* ── THUMBNAIL: image atau video ── */}
                 <div style={{ position: "relative", paddingBottom: "58%", borderRadius: 16, overflow: "hidden", backgroundColor: "#010828", marginBottom: 20 }}>
-                  <LazyVideo
-                    src={p.video}
-                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-                  />
+                  {p.image ? (
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  ) : (
+                    <LazyVideo
+                      src={p.video}
+                      style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  )}
                   <div style={{ position: "absolute", top: 12, left: 12, background: "rgba(111,255,0,0.15)", border: "1px solid rgba(111,255,0,0.3)", borderRadius: 100, paddingLeft: 12, paddingRight: 12, paddingTop: 5, paddingBottom: 5, zIndex: 2 }}>
                     <span style={{ fontFamily: "ui-monospace,monospace", fontSize: 10, textTransform: "uppercase", color: "#6FFF00", letterSpacing: "0.1em" }}>{p.tag}</span>
                   </div>
@@ -557,7 +557,7 @@ export default function Landing() {
                     href={p.href}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label={`Lihat proyek ${p.title} di GitHub`}
+                    aria-label={`Lihat proyek ${p.title}`}
                     style={{
                       width: 40,
                       height: 40,
@@ -586,7 +586,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* ── */}
+      {/* ── CONTACT ── */}
       <section id="contact" style={{ position: "relative", width: "100%", overflow: "hidden", backgroundColor: "#010828" }}>
         <div style={{ position: "relative" }}>
           <LazyVideo
@@ -635,7 +635,6 @@ export default function Landing() {
             </a>
           </div>
 
-          {/* */}
           <div style={{ display: "flex", gap: 12, marginTop: 40 }}>
             {SOCIAL_LINKS.map(({ Icon, href }, i) => (
               <a
@@ -665,7 +664,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* */}
       <style>{`
         @media (min-width: 1024px) {
           #desktop-nav { display: flex !important; }
@@ -679,4 +677,4 @@ export default function Landing() {
       `}</style>
     </div>
   );
-}
+    }
