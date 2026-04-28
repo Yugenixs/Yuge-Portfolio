@@ -36,9 +36,9 @@ const PROJECTS = [
   },
   {
     title: "Dashboard Harga Saham IDX",
-    desc: "Dashboard interaktif untuk memvisualisasikan pergerakan harga saham 20 perusahaan teratas di Bursa Efek Indonesia.",
+    desc: "Dashboard interaktif untuk memvisualisasikan pergerakan harga saham 10 perusahaan teratas di Bursa Efek Indonesia.",
     tag: "Visualization",
-    href: "https://github.com/yugenixs",
+    href: "https://idx-dashboard.streamlit.app/",
     video: PROJECT_VIDEOS[2],
   },
 ];
