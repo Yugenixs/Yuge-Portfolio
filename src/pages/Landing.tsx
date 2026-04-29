@@ -23,7 +23,7 @@ const PROJECTS = [
   {
     title: "Dashboard Harga Saham IDX",
     desc: "Dashboard interaktif untuk memvisualisasikan pergerakan harga saham 10 perusahaan teratas di Bursa Efek Indonesia.",
-    tag: "Visualization",
+    tag: "Data Analysis",
     href: "https://idx-dashboard.streamlit.app/",
     video: PROJECT_VIDEOS[0],
     image: "/idx-dashboard.png",
@@ -31,6 +31,7 @@ const PROJECTS = [
   {
     title: "Proyek 2",
     desc: "deskripsi",
+    tag: "Visualization",
     tag: "Data Analysis",
     href: "https://github.com/yugenixs",
     video: PROJECT_VIDEOS[1],
